@@ -1,0 +1,18 @@
+.nav
+  width: 100%
+  height: $navbarHeight
+  box-shadow: $shadow
+  background-color: #fff
+  z-index: 10
+  .is-nav
+    &-left,
+    &-right,
+    &-center
+      display: flex
+      height: inherit
+    &-left,
+    &-right
+      flex: 0 1 0
+    &-center
+      flex: 1 0 0
+      justify-content: center

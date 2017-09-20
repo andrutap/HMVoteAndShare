@@ -1,0 +1,36 @@
+.controls
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    text-align: left
+    text-transform: none
+    +mobile
+      text-align: center
+  > article
+    margin-bottom: $gap * 3
+    +mobile
+      margin-bottom: $gap
+
+.list
+  display: flex
+  flex-direction: row
+  +mobile
+    overflow: scroll
+
+
+
+.element
+  max-width: 100px
+  max-height: 100px
+  margin-right: $gap
+  &:last-child
+    margin-right: 0
+  &.is-active
+    box-shadow: 0px 0px 7px rgba(blue, .18), 0px 0px 6px rgba(blue, .29)
+    border: .5px solid rgba(blue, .18)
+    +mobile
+      box-shadow: none
+      border: thin solid black

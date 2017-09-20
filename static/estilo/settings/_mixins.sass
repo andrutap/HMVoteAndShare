@@ -1,0 +1,50 @@
+=desktop-large
+  @media screen and (min-width: $desktop-large)
+    @content
+
+=desktop-small
+  @media screen and (min-width: $desktop-small) and (max-width: $desktop-large - 1)
+    @content
+
+=desktop-smaller
+  @media screen and (min-width: $tablet) and (max-width: $desktop-small - 1)
+    @content
+
+=tablet-landscape
+  @media screen and (max-width: $tablet) and (orientation: landscape)
+    @content
+
+=tablet-portrait
+  @media screen and (min-width: $mobile) and (max-width: $tablet) and (orientation: portrait)
+    @content
+
+=handheld
+  @media screen and (max-width: $tablet)
+    @content
+
+=medium
+  @media screen and (max-width: $medium-screen)
+    @content
+
+=mobile
+  @media screen and (max-width: $mobile - 1)
+    @content
+
+=mobile-landscape
+  @media screen and (max-width: $mobile - 1) and (orientation: landscape)
+    @content
+
+=small
+  @media screen and (max-width: $small)
+    @content
+
+=clearfix
+  &:before,
+  &:after
+    content: ''
+    display: table
+  &:after
+    clear: both
+
+=animation ($name)
+  animation: $name $animation

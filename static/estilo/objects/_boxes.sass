@@ -1,0 +1,22 @@
+.box
+  display: block
+  margin: 0 auto
+  padding: $gap
+  background-color: white
+  height: 100%
+  +desktop-large
+    max-width: $desktop-large - 156px
+  +desktop-small
+    max-width: $desktop-small - 156px
+  +desktop-smaller
+    max-width: $desktop-small - 256px
+  +handheld
+    max-width: $tablet
+  +tablet-landscape
+    max-width: $tablet - 156px
+  +medium
+    max-width: $medium-screen - 156px
+  +mobile
+    max-width: 100% !important
+  &.is-fluid
+    max-width: 100%

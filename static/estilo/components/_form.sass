@@ -1,0 +1,69 @@
+.form
+  max-width: 62%
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  +handheld
+    max-width: 100%
+  &.reset
+    max-width: initial
+    display: initial
+    flex-direction: initial
+    margin: initial
+    > .is-form-object
+      display: block
+  legend,
+  small
+    display: block
+    flex: 1 0 100%
+    font-weight: 700
+    text-transform: uppercase
+    margin: 0 auto
+    margin-bottom: $gap
+    text-align: center
+  small
+    text-transform: none
+    font-weight: 300
+  &.is-inline
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    max-width: 100%
+    justify-content: center
+    +mobile
+      flex-direction: column
+
+.is-form-object
+  margin-bottom: $gap
+  padding: 0 $gap
+  display: flex
+  > .button
+    margin: 0 auto
+    display: block
+  label,
+  input:not([type="checkbox"]):not([type="file"])
+    display: block
+  input[type="checkbox"]
+    display: initial
+  label
+    flex: 1 0 18%
+    text-align: right
+  input:not([type="checkbox"])
+    flex: 1 0 75%
+    margin-left: $gap * 3
+    padding-left: $gap
+    padding-top: $gap * .2
+    padding-bottom: $gap * .2
+    max-width: calc(100% - #{$gap} * 3)
+  +mobile
+    display: block
+    label,
+    input:not([type="checkbox"]):not([type="file"])
+      flex: none
+    input:not([type="checkbox"]):not([type="file"])
+      margin-left: 0
+      max-width: 100%
+      width: 100%
+    label
+      text-align: left
+      margin-bottom: $gap

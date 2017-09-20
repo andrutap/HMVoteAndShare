@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+body,
+html
+  margin: 0
+  font-family: 'HM AmpersandDispRegular'
+  width: 100%
+  font-size: 1rem
+  line-height: 1.1
+  background-color: $lightgrey
+
+a.button,
+button,
+input[type="submit"],
+.button
+  -webkit-appearance: none
+  appearance: none
+  outline: none
+  cursor: pointer
+  border: 0
+  background-color: $grey
+  text-transform: uppercase
+  font-weight: 700
+  transition: $transition
+  padding: .5em .75em
+  font-size: .9rem
+  &:focus,
+  &:hover
+    box-shadow: $shadowActive
+    transition: $transition
+
+img
+  display: block
+  max-height: 100%
+
+section
+  min-height: 100vh
+  padding: $gap
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  text-align: center
+  text-transform: uppercase
+  margin-top: 0

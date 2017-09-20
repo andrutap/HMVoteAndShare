@@ -1,0 +1,68 @@
+.horizontal-list
+  display: flex
+  flex-direction: row
+  max-width: 100%
+  overflow-x: auto
+  padding: 0
+  margin: 0
+  overflow: visible
+  margin-bottom: $gap
+  min-height: 200px !important
+  height: auto
+  li
+    list-style: none
+    display: block
+    flex: 1 1 0
+    margin-right: $gap
+    &:last-child
+      margin-right: 0
+  +mobile
+    overflow: auto
+    overflow-x: scroll
+    li
+      flex: 1 0 55%
+
+ol
+  padding-left: 0
+  margin-top: 0
+  margin-bottom: $gap
+  li
+    list-style-position: inside
+    margin-bottom: $gap
+    &:last-child
+      margin-bottom: 0
+
+
+.button-list
+  display: flex
+  justify-content: center
+  > .button
+    margin-right: $gap
+    &:last-child
+      margin-right: 0
+
+.horizontal-list.ins-list
+  min-height: 0 !important
+  min-width: 60%
+  text-align: justify
+  li
+    list-style: circle
+    &:first-child
+      margin-right: $gap * 3
+    &:last-child
+      margin-left: $gap * 3
+  +mobile
+    overflow: initial
+    flex-direction: column
+    li
+      &:first-child
+        margin-right: 0
+        margin-bottom: $gap * 3
+      &:last-child
+        margin-left: 0
+
+.instructions-head
+  color: $red
+  text-transform: uppercase
+  font-weight: 700
+  text-decoration: underline

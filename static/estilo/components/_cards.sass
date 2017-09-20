@@ -1,0 +1,29 @@
+.card
+  max-width: 100%
+  position: relative
+  .is-card-image
+    cursor: pointer
+    .is-card-image-source,
+    .is-card-image-source-big
+      max-width: 100%
+
+    .is-card-heart
+      height: 100%
+      display: flex
+      width: 100%
+      justify-content: center
+      align-items: center
+  .is-card-overlay
+    position: relative
+    width: 100%
+    display: flex
+    padding: .25rem
+    .is-card-name
+      color: black
+      width: inherit
+      bottom: 0
+      text-align: left
+      display: block
+      flex: 1 0 65%
+      +mobile
+        font-size: .7rem

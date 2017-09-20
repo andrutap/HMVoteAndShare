@@ -1,0 +1,75 @@
+.heart,
+.counter
+  pointer-events: none
+
+.heart
+  color: black
+  cursor: pointer
+  user-select: none
+  position: relative
+  margin-right: .25rem
+  &.animated
+    color: $red
+    +animation(scale)
+
+.counter
+  user-select: none
+  cursor: pointer
+  color: black
+
+.heartCounter
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+
+.load-more
+  text-align: center
+  position: fixed
+  bottom: 0
+  width: 100%
+  background: white
+  .button
+    margin-bottom: 0
+
+.instructions
+  background-color: $red
+  margin-left: -$gap
+  margin-right: -$gap
+
+
+.file-upload
+  label
+    cursor: pointer
+    margin-bottom: 0
+  input
+    display: none
+
+.image-preview
+  max-width: 400px
+  margin: 0 auto
+
+.heartInBand
+  max-width: 1.5rem
+  height: 1.5rem
+
+small
+  color: $grey
+  text-align: justify
+  display: block
+  .instructions-head
+    color: $grey
+    font-weight: 700
+
+.bordered
+  border: thin solid black
+
+.hidden
+  &.in-handheld
+    +handheld
+      display: none
+  &.in-desktop
+    display: none
+    +mobile
+      display: block

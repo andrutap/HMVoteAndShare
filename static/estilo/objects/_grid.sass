@@ -1,0 +1,68 @@
+.columns
+  display: flex
+  flex-direction: column
+
+.row
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  margin-bottom: $gap
+  max-width: 100%
+
+.columns
+  > .row
+    flex: 1 1 0
+  &._aligned-end
+    > .row
+      > .tile
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        +handheld
+          justify-content: center
+  &._aligned-center
+    > .row
+      > .tile
+        display: flex
+        flex-direction: column
+        justify-content: center
+        +handheld
+          justify-content: center
+
+
+.tile
+  flex: 1 1 0
+  display: block
+  padding: $gap
+  max-width: inherit
+  @for $i from 1 through 12
+    &.is-#{$i}
+      flex: none
+      width: ($i / 12) * 100%
+      float: left
+      +clearfix
+  +tablet-landscape
+    flex: 1 0 25%
+    @for $i from 1 through 12
+      &.is-#{$i}
+        @if $i >= 6
+          width: ($i / 12) * 100%
+        @else
+          flex: 0 1 33%
+          width: auto
+  +tablet-portrait
+    flex: 1 0 50%
+    @for $i from 1 through 12
+      &.is-#{$i}
+        @if $i > 6
+          width: 100%
+        @else
+          width: 50%
+  +mobile
+    flex: 1 0 100%
+    @for $i from 1 through 12
+      &.is-#{$i}
+        width: 100%
+
+.is-gapless
+  padding: 0
